@@ -1,0 +1,289 @@
+{
+  "matches": [
+    {
+      "vulnerability": {
+        "id": "CVE-2024-1086",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "critical",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-1086"
+        ],
+        "description": "A use-after-free vulnerability in the Linux kernel's netfilter subsystem could allow a local attacker to escalate privileges",
+        "cvssScore": 9.8,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "published": "2024-01-15T00:00:00Z",
+        "fix_state": "unfixed"
+      },
+      "artifact": {
+        "name": "kernel-runtime",
+        "version": "5.10.0-21-generic",
+        "type": "deb",
+        "locations": [
+          {
+            "path": "node_modules/@anthropic-ai/sdk/node_modules/node-gyp/gyp/pylib/gyp",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-indirect-match",
+          "matcher": "dpkg-matcher",
+          "searchedBy": {
+            "distro": {
+              "type": "debian",
+              "version": "11"
+            }
+          },
+          "found": {
+            "versionConstraint": ">= 5.10, < 5.10.0-22",
+            "vulnerabilityID": "CVE-2024-1086"
+          }
+        }
+      ],
+      "suppressions": []
+    },
+    {
+      "vulnerability": {
+        "id": "CVE-2023-44487",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "high",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-44487"
+        ],
+        "description": "HTTP/2 rapid reset attack vulnerability allowing Denial of Service attacks",
+        "cvssScore": 7.5,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "published": "2023-10-10T00:00:00Z",
+        "fix_state": "fixed"
+      },
+      "artifact": {
+        "name": "http2",
+        "version": "3.8.0",
+        "type": "npm",
+        "locations": [
+          {
+            "path": "node_modules/http2",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-match",
+          "matcher": "npm-matcher",
+          "searchedBy": {
+            "package": {
+              "name": "http2",
+              "version": "3.8.0"
+            }
+          },
+          "found": {
+            "versionConstraint": "< 3.8.1",
+            "vulnerabilityID": "CVE-2023-44487"
+          }
+        }
+      ],
+      "suppressions": []
+    },
+    {
+      "vulnerability": {
+        "id": "CVE-2023-32315",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "high",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-32315"
+        ],
+        "description": "Path traversal vulnerability in express-static-gzip allowing directory traversal attacks",
+        "cvssScore": 7.5,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "published": "2023-06-20T00:00:00Z",
+        "fix_state": "fixed"
+      },
+      "artifact": {
+        "name": "express-static-gzip",
+        "version": "2.1.0",
+        "type": "npm",
+        "locations": [
+          {
+            "path": "node_modules/express-static-gzip",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-match",
+          "matcher": "npm-matcher",
+          "searchedBy": {
+            "package": {
+              "name": "express-static-gzip"
+            }
+          },
+          "found": {
+            "versionConstraint": "< 2.1.1",
+            "vulnerabilityID": "CVE-2023-32315"
+          }
+        }
+      ],
+      "suppressions": []
+    },
+    {
+      "vulnerability": {
+        "id": "CVE-2023-26159",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-26159"
+        ],
+        "description": "Regular Expression Denial of Service (ReDoS) vulnerability in lodash package",
+        "cvssScore": 5.3,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "published": "2023-04-10T00:00:00Z",
+        "fix_state": "fixed"
+      },
+      "artifact": {
+        "name": "lodash",
+        "version": "4.17.20",
+        "type": "npm",
+        "locations": [
+          {
+            "path": "node_modules/lodash",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-match",
+          "matcher": "npm-matcher",
+          "searchedBy": {
+            "package": {
+              "name": "lodash",
+              "version": "4.17.20"
+            }
+          },
+          "found": {
+            "versionConstraint": "< 4.17.21",
+            "vulnerabilityID": "CVE-2023-26159"
+          }
+        }
+      ],
+      "suppressions": []
+    },
+    {
+      "vulnerability": {
+        "id": "CVE-2023-28154",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "medium",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-28154"
+        ],
+        "description": "Cross-Site Scripting (XSS) vulnerability in Angular allowing arbitrary script execution",
+        "cvssScore": 6.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "published": "2023-03-15T00:00:00Z",
+        "fix_state": "fixed"
+      },
+      "artifact": {
+        "name": "@angular/core",
+        "version": "14.2.0",
+        "type": "npm",
+        "locations": [
+          {
+            "path": "node_modules/@angular/core",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-match",
+          "matcher": "npm-matcher",
+          "searchedBy": {
+            "package": {
+              "name": "@angular/core"
+            }
+          },
+          "found": {
+            "versionConstraint": "< 14.2.1",
+            "vulnerabilityID": "CVE-2023-28154"
+          }
+        }
+      ],
+      "suppressions": []
+    },
+    {
+      "vulnerability": {
+        "id": "CVE-2023-21816",
+        "dataSource": "nvd",
+        "namespace": "nvd:cpe",
+        "severity": "low",
+        "urls": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2023-21816"
+        ],
+        "description": "Information disclosure vulnerability in minimist command-line argument parser",
+        "cvssScore": 3.1,
+        "cvssVector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "published": "2023-02-15T00:00:00Z",
+        "fix_state": "fixed"
+      },
+      "artifact": {
+        "name": "minimist",
+        "version": "1.2.5",
+        "type": "npm",
+        "locations": [
+          {
+            "path": "node_modules/minimist",
+            "layerID": ""
+          }
+        ]
+      },
+      "relatedVulnerabilities": [],
+      "matchDetails": [
+        {
+          "type": "exact-match",
+          "matcher": "npm-matcher",
+          "searchedBy": {
+            "package": {
+              "name": "minimist"
+            }
+          },
+          "found": {
+            "versionConstraint": "< 1.2.6",
+            "vulnerabilityID": "CVE-2023-21816"
+          }
+        }
+      ],
+      "suppressions": []
+    }
+  ],
+  "source": {
+    "type": "directory",
+    "target": "./node_modules"
+  },
+  "distro": {
+    "name": "debian",
+    "version": "11"
+  },
+  "descriptor": {
+    "name": "grype",
+    "version": "0.65.0"
+  },
+  "db": {
+    "built": "2024-09-14T10:30:00Z",
+    "schemaVersion": 5,
+    "location": "/root/.cache/grype/db",
+    "checksum": "sha256:abcd1234"
+  }
+}
