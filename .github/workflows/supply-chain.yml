@@ -54,3 +54,34 @@ jobs:
         with:
           sarif_file: results.sarif
           category: "grype-sbom"
+
+# Install GuardDog via pip 
+      - name: Install GuardDog & jq 
+        run: | 
+          pip3 install guarddog 
+          sudo apt-get install -y jq 
+ 
+     # Parse package.json and run GuardDog scan on each package name 
+      - name: Run GuardDog Dependency Scan 
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        run: | 
+          echo "Extracting dependencies from package.json..." 
+          DEPS=$(jq -r '(.dependencies // {}) + (.devDependencies // {}) | keys[]' package.json) 
+           
+          if [ -z "$DEPS" ]; then 
+            echo "No dependencies found to scan." 
+            exit 0 
+          fi 
+ 
+          echo "Scanning dependencies with GuardDog..." 
+          for dep in $DEPS; do 
+            echo "----------------------------------------" 
+            echo "Scanning package: $dep" 
+            # Use 'scan' for remote npm registry packages 
+            guarddog npm scan "$dep" \ 
+              --exclude-rules metadata_mismatch \ 
+              --exclude-rules potentially_compromised_email_domain \ 
+              --exclude-rules unclaimed_maintainer_email_domain || true 
+          done 
+        continue-on-error: true
